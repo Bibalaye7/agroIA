@@ -1,12 +1,66 @@
-body{margin:0;font-family:Arial,sans-serif;background:#0a1f14;color:#fff}
-.poster{width:210mm;height:297mm;padding:20mm;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between}
-header{text-align:center}
-header h1{font-size:3em;color:#2bd673;margin:0}
-header h2{margin:0;font-size:1.5em;color:#eaf5ed}
-.slogan{margin-top:.5em;color:#b7d4bf;font-weight:bold}
-main{display:flex;justify-content:space-around;margin-top:20px}
-.bloc{width:30%;background:#11281b;padding:10px;border-radius:12px}
-.bloc h3{color:#2bd673}
-ul{padding-left:20px}
-footer{text-align:center;font-size:.9em;color:#b7d4bf}
-footer a{color:#2bd673;text-decoration:none}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a1f14;
+  color: #fff;
+}
+
+.poster {
+  width: 100%;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  color: #2bd673;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 20px;
+  color: #eaf5ed;
+  margin: 0;
+}
+
+.slogan {
+  margin-top: 10px;
+  color: #b7d4bf;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.bloc {
+  background: #11281b;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.bloc h3 {
+  color: #2bd673;
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #b7d4bf;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #2bd673;
+  text-decoration: none;
+}
