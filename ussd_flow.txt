@@ -1,0 +1,19 @@
+Écran d’accueil (*123#)
+1) Déclarer un problème
+2) Recevoir conseils par culture
+3) Voir alertes locales
+9) Langue (1 Français, 2 Wolof)
+
+Déclarer un problème :
+- Choisir culture : 1 Tomate 2 Maïs 3 Oignon 4 Autre
+- Choisir stade : 1 Jeune plant 2 Croissance 3 Floraison 4 Récolte
+- Symptômes : 1 Taches feuilles 2 Jaunissement 3 Chenilles 4 Autre
+Réponse : Risque mildiou élevé (72/100). Traiter sous 48h. Réduire arrosage (pluie prévue).
+
+Conseils par culture :
+- Tomate → calendrier semis, arrosage, traitements
+- Maïs → lutte chenille, arrosage hebdo
+
+Alertes locales :
+- Thiès → Chenille maïs signalée
+- Kaolack → Risque sécheresse semaine prochaine
