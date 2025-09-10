@@ -18,6 +18,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* pour éviter le débordement */
 }
 
 .logo {
@@ -26,17 +27,20 @@ body {
   color: white;
   text-decoration: none;
 }
- .img-section {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-top: 1rem;
-    }
-    .grid.two img, .grid.three img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
+
+.img-section {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.grid.two img,
+.grid.three img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 
 .menu {
   list-style: none;
@@ -99,4 +103,70 @@ body {
   margin-top: 20px;
   background: #11281b;
   color: #cccccc;
+}
+
+/* ======================
+   📱 Media Queries
+====================== */
+
+/* Tablettes (écrans ≤ 900px) */
+@media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .menu li {
+    margin: 10px 10px 0 0;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+}
+
+/* Mobiles (écrans ≤ 600px) */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 13px;
+    padding: 10px;
+  }
 }
