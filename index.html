@@ -5,104 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AgroIA – IA pour l’agriculture</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Icônes Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <header class="container header">
     <nav class="nav">
-      <a class="logo" href="#">AgroIA</a>
- 
+      <a class="logo" href="#"><i class="fas fa-leaf"></i> AgroIA</a>
       <ul class="menu">
-        <li><a href="#probleme">Problème</a></li>
-        <li><a href="#solution">Solution IA</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="agroia.html">IA</a></li>
+        <li><a href="#probleme"><i class="fas fa-exclamation-triangle"></i> Problème</a></li>
+        <li><a href="#solution"><i class="fas fa-robot"></i> Solution IA</a></li>
+        <li><a href="#impact"><i class="fas fa-chart-line"></i> Impact</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="agroia.html"><i class="fas fa-brain"></i> IA</a></li>
       </ul>
     </nav>
     <section class="hero">
-      <h1>Assistant IA pour des récoltes plus sûres</h1>
+      <h1><i class="fas fa-seedling"></i> Assistant IA pour des récoltes plus sûres</h1>
       <p>Alertes précoces, recommandations d’irrigation et diagnostics simples – accessibles même en 2G.</p>
-      <a class="btn" href="#demo">Voir la démo</a>
+      <a class="btn" href="#demo"><i class="fas fa-play"></i> Voir la démo</a>
+      <img src="images/champs.jpg" alt="Champs cultivés" class="img-section">
     </section>
   </header>
 
   <main>
+    <!-- Problème -->
     <section id="probleme" class="container grid two">
       <div>
-        <h2>Le problème</h2>
+        <h2><i class="fas fa-bug"></i> Le problème</h2>
         <ul class="list">
-          <li>Maladies & ravageurs → pertes importantes</li>
-          <li>Conseil tardif & inégal</li>
-          <li>Peu de données pour décider au champ</li>
-          <li>Fracture numérique (2G, langues locales)</li>
+          <li><i class="fas fa-virus"></i> Maladies & ravageurs → pertes importantes</li>
+          <li><i class="fas fa-clock"></i> Conseil tardif & inégal</li>
+          <li><i class="fas fa-database"></i> Peu de données pour décider au champ</li>
+          <li><i class="fas fa-mobile"></i> Fracture numérique (2G, langues locales)</li>
         </ul>
+        <img src="images/malade feuille.jpg" alt="Feuilles malades" class="img-section">
       </div>
       <div class="card">
-        <h3>Notre ambition</h3>
+        <h3><i class="fas fa-bullseye"></i> Notre ambition</h3>
         <p>Mettre un <b>conseiller IA</b> dans la poche de chaque producteur.</p>
+        <img src="images/agriculteur au champ.jpg" alt="Agriculteur au champ" class="img-section">
       </div>
     </section>
 
+    <!-- Solution -->
     <section id="solution" class="strip">
       <div class="container">
-        <h2>Solution IA</h2>
+        <h2><i class="fas fa-lightbulb"></i> Solution IA</h2>
         <div class="grid three">
           <article class="card">
-            <h3>Score de risque</h3>
+            <h3><i class="fas fa-chart-area"></i> Score de risque</h3>
             <p>Météo locale + historique → <b>alertes précoces</b> jour par jour.</p>
+            <img src="images/solution ia.jpg" alt="Analyse météo" />
           </article>
           <article class="card">
-            <h3>Diagnostic simple</h3>
+            <h3><i class="fas fa-camera"></i> Diagnostic simple</h3>
             <p>Photo quand possible, sinon description par SMS → conseils immédiats.</p>
+            <img src="images/Smartphone avec photo feuille.jpg" alt="Smartphone avec photo feuille" />
           </article>
           <article class="card">
-            <h3>Irrigation & intrants</h3>
+            <h3><i class="fas fa-tint"></i> Irrigation & intrants</h3>
             <p>Dosages sûrs, fenêtres d’application, économies d’eau et d’engrais.</p>
+            <img src="images/Irrigation au champ.jpg" alt="Irrigation au champ" />
           </article>
         </div>
-        <p class="hint">Accès : USSD/SMS, WhatsApp bot, ou web léger.</p>
+        <p class="hint"><i class="fas fa-signal"></i> Accès : USSD/SMS, WhatsApp bot, ou web léger.</p>
       </div>
     </section>
 
+    <!-- Impact -->
     <section id="impact" class="container grid two">
       <div>
-        <h2>Impact attendu</h2>
+        <h2><i class="fas fa-seedling"></i> Impact attendu</h2>
         <ul class="stats">
-          <li><strong>+15–25%</strong> rendement</li>
-          <li><strong>−20–30%</strong> pertes maladies/ravageurs</li>
-          <li><strong>−10–20%</strong> eau d’irrigation</li>
+          <li><i class="fas fa-arrow-up"></i> <strong>+15–25%</strong> rendement</li>
+          <li><i class="fas fa-shield-virus"></i> <strong>−20–30%</strong> pertes maladies/ravageurs</li>
+          <li><i class="fas fa-water"></i> <strong>−10–20%</strong> eau d’irrigation</li>
         </ul>
+        <img src="images/graphique de rendement.jpg" alt="Graphique agriculture" class="img-section">
       </div>
       <div class="card">
-        <h3>Pilote</h3>
+        <h3><i class="fas fa-users"></i> Pilote</h3>
         <p>500 producteurs, 3 régions, suivi mensuel et accompagnement coopératives.</p>
+        <img src="images/Groupe d'agriculteurs.jpg" alt="Groupe d'agriculteurs" class="img-section">
       </div>
     </section>
 
+    <!-- Démo -->
     <section id="demo" class="strip">
       <div class="container">
-        <h2>Démo (concept)</h2>
+        <h2><i class="fas fa-laptop-code"></i> Démo (concept)</h2>
         <div class="demo">
           <div class="sms">
-            <p><span class="tag">USSD</span> *123# → 1) Culture 2) Stade 3) Symptômes</p>
+            <p><span class="tag"><i class="fas fa-hashtag"></i> USSD</span> *123# → 1) Culture 2) Stade 3) Symptômes</p>
             <p>➜ <b>Risque mildiou : 72/100</b>. Traiter dans 24–48h si taches huileuses visibles. Arrosage réduit demain (pluie prévue).</p>
+            <img src="images/Téléphone basique USSD.jpg" alt="Téléphone basique USSD" />
           </div>
           <div class="whatsapp">
-            <p><span class="tag">WhatsApp</span> Envoyer une photo de feuille → réponse guidée en 10 s.</p>
+            <p><span class="tag"><i class="fab fa-whatsapp"></i> WhatsApp</span> Envoyer une photo de feuille → réponse guidée en 10 s.</p>
+            <img src="images/Chat WhatsApp.jpg" alt="Chat WhatsApp" />
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="container">
-      <h2>Contact</h2>
-      <p>Cherchons partenaires (coopératives, ONG, opérateurs télécom, instituts). Écrivez-nous : <a href="mailto:contact@agroia.sn">contact@agroia.sn</a></p>
+      <h2><i class="fas fa-envelope-open-text"></i> Contact</h2>
+      <p>Cherchons partenaires (coopératives, ONG, opérateurs télécom, instituts).  
+      Écrivez-nous : <a href="mailto:contact@agroia.sn">contact@agroia.sn</a></p>
+      <img src="images/Réunion de partenaires.jpg" alt="Réunion de partenaires" class="img-section">
     </section>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© 2025 AgroIA • Inclusif, local, data-driven.</p>
+      <p><i class="fas fa-leaf"></i> © 2025 AgroIA • Inclusif, local, data-driven.</p>
     </div>
   </footer>
 </body>
