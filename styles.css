@@ -28,12 +28,14 @@ body {
   text-decoration: none;
 }
 
+/* Images générales */
 .img-section {
   max-width: 100%;
   border-radius: 12px;
   margin-top: 1rem;
 }
 
+/* Images dans les grilles */
 .grid.two img,
 .grid.three img {
   width: 100%;
@@ -41,6 +43,16 @@ body {
   border-radius: 10px;
   margin-top: 10px;
 }
+
+/* Images dans la démo (ajout) */
+.demo img {
+  width: 100%;        /* occupe toute la largeur du bloc */
+  height: auto;       /* conserve les proportions */
+  border-radius: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
 
 .menu {
   list-style: none;
@@ -97,6 +109,17 @@ body {
   color: white;
 }
 
+
+.back-to-top {
+      display: inline-block;
+      margin-top: 10px;
+      color: #2bd673;
+      text-decoration: none;
+      font-weight: bold;
+ }
+    .back-to-top:hover {
+      text-decoration: underline;
+    }
 .footer {
   text-align: center;
   padding: 15px;
@@ -104,6 +127,7 @@ body {
   background: #11281b;
   color: #cccccc;
 }
+
 
 /* ======================
    📱 Media Queries
