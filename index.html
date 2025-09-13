@@ -4,14 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AgroIA – IA pour l’agriculture</title>
-  <link rel="stylesheet" href="styles.css" />
   <!-- Icônes Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Fichier CSS externe -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="container header">
     <nav class="nav">
       <a class="logo" href="#"><i class="fas fa-leaf"></i> AgroIA</a>
+
+      <!-- Checkbox cachée pour contrôler le menu -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <i class="fas fa-bars"></i>
+      </label>
+
       <ul class="menu">
         <li><a href="#probleme"><i class="fas fa-exclamation-triangle"></i> Problème</a></li>
         <li><a href="#solution"><i class="fas fa-robot"></i> Solution IA</a></li>
@@ -20,6 +29,7 @@
         <li><a href="agroia.html"><i class="fas fa-brain"></i> IA</a></li>
       </ul>
     </nav>
+
     <section class="hero">
       <h1><i class="fas fa-seedling"></i> Assistant IA pour des récoltes plus sûres</h1>
       <p>Alertes précoces, recommandations d’irrigation et diagnostics simples – accessibles même en 2G.</p>
@@ -122,7 +132,6 @@
     <a href="#top" class="back-to-top"><i class="fas fa-arrow-up"></i> Haut de page</a>
     <div class="container">
       <p><i class="fas fa-leaf"></i> © 2025 AgroIA • Inclusif, local, data-driven.</p>
-       
     </div>
   </footer>
 </body>

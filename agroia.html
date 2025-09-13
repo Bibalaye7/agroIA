@@ -3,34 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <title>Poster AgroIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Icônes Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="agroia.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <section class="poster">
-
     <!-- Barre de navigation -->
-  <header> 
+    <header> 
       <nav class="nav">
-      <a class="logo" href="#"><i class="fas fa-leaf"></i> AgroIA</a>
-      <ul class="menu">
-        <li><a href="#probleme"><i class="fas fa-exclamation-triangle"></i> Problème</a></li>
-        <li><a href="#solution"><i class="fas fa-robot"></i> Solution IA</a></li>
-        <li><a href="#impact"><i class="fas fa-chart-line"></i> Impact</a></li>
-        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        <li><a href="index.html">Site Complet</a></li>
-      </ul>
-    </nav>
+        <a class="logo" href="#"><i class="fas fa-leaf"></i> AgroIA</a>
 
-            <h1>AgroIA</h1>
+        <!-- Menu hamburger -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger"><i class="fas fa-bars"></i></label>
+
+        <ul class="menu">
+          <li><a href="#probleme"><i class="fas fa-exclamation-triangle"></i> Problème</a></li>
+          <li><a href="#solution"><i class="fas fa-robot"></i> Solution IA</a></li>
+          <li><a href="#impact"><i class="fas fa-chart-line"></i> Impact</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li><a href="index.html">Site Complet</a></li>
+        </ul>
+      </nav>
+
+      <h1>AgroIA</h1>
       <h2>Assistant IA pour des récoltes plus sûres</h2>
       <p class="slogan">Plus de Récolte , Moins de Pertes , Accessible en 2G</p>
       <img src="images/champs.jpg" alt="Champs de culture">
-  </header>
+    </header>
 
     <main>
       <div class="bloc" id="probleme">
-        <h3> Problème</h3>
+        <h3>Problème</h3>
         <ul>
           <li>Maladies et ravageurs → pertes élevées</li>
           <li>Accès limité au conseil agronomique</li>
@@ -48,7 +54,7 @@
         <img src="images/smartphone-325484_1280.jpg" alt="Smartphone agriculteur">
       </div>
       <div class="bloc" id="impact">
-        <h3> Impact</h3>
+        <h3>Impact</h3>
         <ul>
           <li>+15 à 25% de rendement</li>
           <li>-20 à 30% de pertes</li>

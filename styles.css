@@ -22,13 +22,12 @@ h2, h3, h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* pour éviter le débordement */
   padding: 10px 0;
   border-bottom: 2px solid #2bd673;
+  position: relative;
 }
 .nav i{
-  height: 40px;
-   color: #2bd673
+  color: #2bd673;
 }
 .nav a{
   color: #2bd673;
@@ -49,7 +48,7 @@ h2, h3, h4 {
   margin-top: 1rem;
 }
 
-/* Images dans les grilles */
+/* Grilles */
 .grid.two img,
 .grid.three img {
   width: 100%;
@@ -58,52 +57,44 @@ h2, h3, h4 {
   margin-top: 10px;
 }
 
-/* Images dans la démo (ajout) */
 .demo img {
-  width: 100%;        /* occupe toute la largeur du bloc */
-  height: auto;       /* conserve les proportions */
+  width: 100%;
   border-radius: 10px;
   margin-top: 10px;
   display: block;
 }
 
-
+/* Menu */
 .menu {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
-
 .menu li {
   margin-left: 15px;
 }
-
 .menu a {
   text-decoration: none;
   color: white;
 }
-
 .menu a:hover {
-  text-decoration: none;
   color: #2bd673;
 }
 
+/* Hero */
 .hero {
   text-align: center;
   padding: 50px 20px;
 }
-
 .hero h1 {
   font-size: 28px;
   margin-bottom: 10px;
   color: #2bd673;
 }
-
 .hero p {
   color: #cccccc;
 }
-
 .btn {
   display: inline-block;
   background: green;
@@ -111,10 +102,6 @@ h2, h3, h4 {
   padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none;
-}
-
-.section {
-  padding: 20px;
 }
 
 .card {
@@ -125,17 +112,16 @@ h2, h3, h4 {
   color: white;
 }
 
-
 .back-to-top {
-      display: inline-block;
-      margin-top: 10px;
-      color: #2bd673;
-      text-decoration: none;
-      font-weight: bold;
- }
-    .back-to-top:hover {
-      text-decoration: underline;
-    }
+  display: inline-block;
+  margin-top: 10px;
+  color: #2bd673;
+  text-decoration: none;
+  font-weight: bold;
+}
+.back-to-top:hover {
+  text-decoration: underline;
+}
 .footer {
   text-align: center;
   padding: 15px;
@@ -144,67 +130,67 @@ h2, h3, h4 {
   color: #cccccc;
 }
 
+/* Masquer la checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Bouton hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #2bd673;
+  cursor: pointer;
+}
 
 /* ======================
    📱 Media Queries
 ====================== */
-
-/* Tablettes (écrans ≤ 900px) */
 @media (max-width: 900px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu {
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-
-  .menu li {
-    margin: 10px 10px 0 0;
-  }
-
   .hero h1 {
     font-size: 24px;
   }
 }
 
-/* Mobiles (écrans ≤ 600px) */
 @media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
+  .hamburger {
+    display: block;
   }
-
   .menu {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+    background: #11281b;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+  /* Quand la checkbox est cochée → afficher menu */
+  .menu-toggle:checked + .hamburger + .menu {
+    display: flex;
   }
 
   .hero {
     padding: 30px 10px;
   }
-
   .hero h1 {
     font-size: 20px;
   }
-
   .hero p {
     font-size: 14px;
   }
-
   .btn {
     padding: 8px 12px;
     font-size: 14px;
   }
-
   .card {
     padding: 10px;
     font-size: 14px;
   }
-
   .footer {
     font-size: 13px;
     padding: 10px;

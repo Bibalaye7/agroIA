@@ -6,7 +6,7 @@ body {
 }
 
 .poster {
-  max-width: 900px;   /* largeur max sur grand écran */
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -15,17 +15,12 @@ header {
   text-align: center;
   margin-bottom: 20px;
 }
-.nav i{
-  color: #2bd673;
-  text-decoration: none;
-}
 
 header img {
-  max-width: 100%;   
-  height: auto;
+  max-width: 100%;
   border-radius: 10px;
-  display: block;
   margin: 0 auto 20px;
+  display: block;
 }
 
 header h1 {
@@ -55,7 +50,7 @@ main {
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 10px;
-  text-align: center; 
+  text-align: center;
 }
 
 .bloc h3 {
@@ -64,17 +59,14 @@ main {
 }
 
 .bloc img {
-  width: 100%;       
-  max-width: 100%;  
-  height: auto;      
+  width: 100%;
   border-radius: 10px;
   margin-top: 15px;
-  display: block;
 }
 
 ul {
   padding-left: 20px;
-  text-align: left; 
+  text-align: left;
 }
 
 footer {
@@ -86,12 +78,90 @@ footer {
 
 footer a {
   color: #2bd673;
-  text-decoration: non;
+  text-decoration: none;
 }
 
-/* ---------------- Responsive ---------------- */
+/* === Barre de navigation === */
+nav {
+  background: #11281b;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+}
 
-/* Petits téléphones (≤480px) */
+nav .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2bd673;
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #2bd673;
+}
+
+/* Masquer la checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Bouton hamburger */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #2bd673;
+  cursor: pointer;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #11281b;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+  }
+
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Quand la checkbox est cochée → afficher le menu */
+  .menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+}
+
+/* 📱 Petits téléphones */
 @media (max-width: 480px) {
   header h1 {
     font-size: 22px;
@@ -122,7 +192,7 @@ footer a {
   }
 }
 
-/* Tablettes (481px à 768px) */
+/* 📱 Tablettes */
 @media (max-width: 768px) {
   header h1 {
     font-size: 26px;
@@ -141,70 +211,7 @@ footer a {
   }
 }
 
-
-    /* === Barre de navigation === */
-    nav {
-      background: #11281b;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-
-    nav .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #2bd673;
-      text-decoration: none;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      margin: 0;
-      padding: 0;
-      gap: 15px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #2bd673;
-      text-decoration: none;
-    }
-
-    /* Responsive menu (mobile) */
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        background: #0a1f14;
-        position: absolute;
-        top: 50px;
-        right: 20px;
-        padding: 10px;
-        border-radius: 8px;
-        display: none;
-      }
-      nav input:checked ~ ul {
-        display: flex;
-      }
-      nav label {
-        font-size: 22px;
-        cursor: pointer;
-        color: #fff;
-        display: block;
-      }
-    }
-
-
-/* Grands écrans (≥1200px) */
+/* 💻 Grands écrans */
 @media (min-width: 1200px) {
   .poster {
     max-width: 1100px;
