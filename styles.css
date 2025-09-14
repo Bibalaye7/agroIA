@@ -10,6 +10,9 @@ h2, h3, h4 {
   color: #2bd673;
   margin-top: 0;
 }
+p {
+  font-size: x-large;
+}
 
 .container {
   width: 90%;
