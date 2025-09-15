@@ -30,16 +30,32 @@
       </ul>
     </nav>
 
-   <section id="demo" class="strip">
-  <div class="container">
+<section id="demo">
     <h2><i class="fas fa-laptop-code"></i> Démo (concept)</h2>
-    <marquee>
-    <p>Testez dès maintenant notre prototype IA :</p>
-    </marquee>
-    <a class="btn" href="diagnose.php"><i class="fas fa-microscope"></i> Tester AgroIA</a>
-  </div>
-</section>
+    <marquee><p>Testez dès maintenant notre prototype IA :</p></marquee>
+    <a class="btn" href="#prototype"><i class="fas fa-microscope"></i> Tester AgroIA</a>
+  </section>
 
+  <!-- MODAL Prototype IA -->
+  <div id="prototype" class="modal">
+    <div class="modal-content">
+      <a href="#demo" class="close">&times;</a>
+      <h2><i class="fas fa-vial"></i> Prototype IA (simulation)</h2>
+      <div class="formulaire">
+        <label for="symptomes">Décrire les symptômes :</label>
+        <textarea id="symptomes" placeholder="Exemple : taches jaunes sur les feuilles..."></textarea>
+
+        <label for="photo">Ou envoyer une photo :</label>
+        <input type="file" id="photo" accept="image/*">
+
+        <button>Analyser (simulation)</button>
+      </div>
+      <div class="resultat">
+        <p><b>Diagnostic simulé :</b> Mildiou probable.</p>
+        <p><b>Recommandation :</b> Surveiller 48h et réduire arrosage (pluie prévue).</p>
+      </div>
+    </div>
+  </div>
   </header>
 
   <main>
