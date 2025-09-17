@@ -1,11 +1,8 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #ffffff;
-  background-color: #0a1f14;
-  padding-top: 70px; /* ✅ espace pour compenser la navbar fixe */
+  background: #0a1f14;
+  color: #fff;
 }
 
 .poster {
@@ -85,27 +82,17 @@ footer a {
 }
 
 /* === Barre de navigation === */
-.nav {
+nav {
+  background: #11281b;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  border-bottom: 2px solid #2bd673;
-  position: fixed;      /* ✅ Fixer la navbar */
-  top: 0;               /* en haut */
-  left: 0;
-  width: 100%;          /* occupe toute la largeur */
-  background: #0a1f14;  /* fond solide pour cacher le contenu qui passe dessous */
-  z-index: 1000;        /* toujours au-dessus */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
 }
-.nav i{
-  color: #2bd673;
-}
-.nav a{
-  color: #2bd673;
-  text-decoration: none;
-  margin-right: 50px;
-}
+
 nav .logo {
   font-size: 20px;
   font-weight: bold;
