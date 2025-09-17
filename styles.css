@@ -5,7 +5,9 @@ body {
   line-height: 1.6;
   color: #ffffff;
   background-color: #0a1f14;
+  padding-top: 70px; /* ✅ espace pour compenser la navbar fixe */
 }
+
 h2, h3, h4 {
   color: #2bd673;
   margin-top: 0;
@@ -25,16 +27,23 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 20px;
   border-bottom: 2px solid #2bd673;
-  position: relative;
+  position: fixed;      /* ✅ Fixer la navbar */
+  top: 0;               /* en haut */
+  left: 0;
+  width: 100%;          /* occupe toute la largeur */
+  background: #0a1f14;  /* fond solide pour cacher le contenu qui passe dessous */
+  z-index: 1000;        /* toujours au-dessus */
 }
+
 .nav i{
   color: #2bd673;
 }
 .nav a{
   color: #2bd673;
   text-decoration: none;
+  margin-right: 50px;
 }
 
 .logo {
