@@ -1,3 +1,4 @@
+/* === Style global === */
 body {
   margin: 0;
   padding: 0;
@@ -5,12 +6,14 @@ body {
   line-height: 1.6;
   color: #ffffff;
   background-color: #0a1f14;
-  padding-top: 70px;   /* ✅ espace pour compenser la navbar */
+  padding-top: 70px;   /* ✅ espace pour compenser la navbar fixe */
 }
+
 h2, h3, h4 {
   color: #2bd673;
   margin-top: 0;
 }
+
 p {
   font-size: x-large;
 }
@@ -30,20 +33,24 @@ nav {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #2bd673;
-  position: fixed;     /* ✅ Fixée en haut */
+  position: fixed;
   top: 0;
-  right: 5px;
-  width: 100%;
-  z-index: 1000;       /* ✅ Toujours au-dessus */
-}
-.nav i{
-  color: #2bd673;
-}
-.nav a{
-  color: #2bd673;
-  text-decoration: none;
+  left: 0;           /* ✅ collé à gauche */
+  width: 100%;       /* ✅ occupe toute la largeur */
+  z-index: 1000;     /* ✅ Toujours au-dessus */
 }
 
+.nav i {
+  color: #2bd673;
+}
+
+.nav a {
+  color: #2bd673;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* === Logo === */
 .logo {
   font-weight: bold;
   font-size: 20px;
@@ -51,14 +58,39 @@ nav {
   text-decoration: none;
 }
 
-/* Images générales */
+/* === Menu version bureau === */
+.menu {
+  display: flex;    /* ✅ visible par défaut en PC */
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  text-align: center;
+}
+
+/* Masquer la checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Bouton hamburger (caché en PC) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: #2bd673;
+  cursor: pointer;
+}
+
+/* === Autres sections === */
 .img-section {
   max-width: 100%;
   border-radius: 12px;
   margin-top: 1rem;
 }
 
-/* Grilles */
 .grid.two img,
 .grid.three img {
   width: 100%;
@@ -73,28 +105,6 @@ nav {
   margin-top: 10px;
   display: block;
 }
-
- .menu {
-    display: none;
-    flex-direction: column;
-    background: #11281b;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    border-radius: 5px;
-    padding: 10px;
-    width: 200px;
-  }
-
-  .menu li {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  /* Quand la checkbox est cochée → afficher le menu */
-  .menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-  }
 
 .hero {
   text-align: center;
@@ -135,6 +145,7 @@ nav {
 .back-to-top:hover {
   text-decoration: underline;
 }
+
 .footer {
   text-align: center;
   padding: 15px;
@@ -143,95 +154,105 @@ nav {
   color: #cccccc;
 }
 
-/* Masquer la checkbox */
-.menu-toggle {
-  display: none;
-}
-
-/* Bouton hamburger */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  color: #2bd673;
-  cursor: pointer;
-}
+/* === Modal === */
 .modal {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-      opacity: 0;
-      transition: opacity 0.4s ease;
-    }
-    .modal:target {
-      display: flex;
-      opacity: 1;
-      animation: fadeIn 0.4s ease forwards;
-    }
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.modal:target {
+  display: flex;
+  opacity: 1;
+  animation: fadeIn 0.4s ease forwards;
+}
+.modal-content {
+  background: #11281b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: left;
+  position: relative;
+  transform: scale(0.8);
+  animation: zoomIn 0.4s ease forwards;
+}
+.modal:target .modal-content {
+  animation: zoomIn 0.4s ease forwards;
+}
 
-    .modal-content {
-      background: #11281b;
-      padding: 20px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 500px;
-      text-align: left;
-      position: relative;
-      transform: scale(0.8);
-      animation: zoomIn 0.4s ease forwards;
-    }
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
 
-    .modal:target .modal-content {
-      animation: zoomIn 0.4s ease forwards;
-    }
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #fff;
+}
+.close:hover { color: red; }
 
-    /* Animation keyframes */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to   { transform: scale(1); opacity: 1; }
-    }
-
-    .close {
-      position: absolute;
-      top: 10px; right: 15px;
-      text-decoration: none;
-      font-size: 22px;
-      color: #fff;
-    }
-    .close:hover { color: red; }
-
-    .formulaire label {
-      display: block;
-      margin: 10px 0 5px;
-      font-weight: bold;
-      color: #2bd673;
-    }
-    .formulaire textarea, .formulaire input[type=file] {
-      width: 100%; padding: 8px; border-radius: 5px; border: none; margin-bottom: 10px;
-    }
-    .formulaire button {
-      background: #2bd673; color: #fff; border: none;
-      padding: 10px 15px; border-radius: 5px;
-      cursor: not-allowed;
-    }
-    .resultat {
-      margin-top: 20px;
-      padding: 15px;
-      background: #1a3a28;
-      border-radius: 8px;
-    }
+.formulaire label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #2bd673;
+}
+.formulaire textarea, .formulaire input[type=file] {
+  width: 100%; padding: 8px; border-radius: 5px; border: none; margin-bottom: 10px;
+}
+.formulaire button {
+  background: #2bd673; color: #fff; border: none;
+  padding: 10px 15px; border-radius: 5px;
+  cursor: not-allowed;
+}
+.resultat {
+  margin-top: 20px;
+  padding: 15px;
+  background: #1a3a28;
+  border-radius: 8px;
+}
 
 /* ======================
-   📱 Media Queries
+   📱 Responsive
 ====================== */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* ✅ caché par défaut */
+    flex-direction: column;
+    background: #11281b;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+  }
+
+  /* Quand la checkbox est cochée → afficher le menu */
+  .menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block; /* ✅ visible en mobile */
+  }
+}
+
 @media (max-width: 900px) {
   .hero h1 {
     font-size: 24px;
@@ -239,27 +260,6 @@ nav {
 }
 
 @media (max-width: 600px) {
-  .hamburger {
-    display: block;
-  }
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-    background: #11281b;
-    border-radius: 5px;
-    padding: 10px 0;
-  }
-  .menu li {
-    margin: 10px 0;
-    text-align: center;
-  }
-  /* Quand la checkbox est cochée → afficher menu */
-  .menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-  }
-
   .hero {
     padding: 30px 10px;
   }
