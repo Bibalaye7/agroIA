@@ -5,6 +5,7 @@ body {
   line-height: 1.6;
   color: #ffffff;
   background-color: #0a1f14;
+  padding-top: 70px;   /* ✅ espace pour compenser la navbar */
 }
 h2, h3, h4 {
   color: #2bd673;
@@ -21,13 +22,19 @@ p {
   padding: 15px;
 }
 
-.nav {
+/* === Barre de navigation === */
+nav {
+  background: #11281b;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
   border-bottom: 2px solid #2bd673;
-  position: relative;
+  position: fixed;     /* ✅ Fixée en haut */
+  top: 0;
+  right: 5px;
+  width: 100%;
+  z-index: 1000;       /* ✅ Toujours au-dessus */
 }
 .nav i{
   color: #2bd673;
@@ -67,25 +74,28 @@ p {
   display: block;
 }
 
-/* Menu */
-.menu {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-.menu li {
-  margin-left: 15px;
-}
-.menu a {
-  text-decoration: none;
-  color: white;
-}
-.menu a:hover {
-  color: #2bd673;
-}
+ .menu {
+    display: none;
+    flex-direction: column;
+    background: #11281b;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+  }
 
-/* Hero */
+  .menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Quand la checkbox est cochée → afficher le menu */
+  .menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
 .hero {
   text-align: center;
   padding: 50px 20px;
